@@ -1,7 +1,7 @@
 import json
 import os
 from abc import ABC, abstractmethod
-from src.participant import ChatParticipant
+from participant import ChatParticipant
 
 class FileWorker(ABC):
     @abstractmethod

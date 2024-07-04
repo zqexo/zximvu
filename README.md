@@ -17,7 +17,7 @@
 
 - Python 3.8+
 - PostgreSQL
-- Установленные пакеты Python, указанные в `requirements.txt`.
+- Установленные пакеты Python, указанные в `pyproject.toml`.
 
 ### Шаги установки
 
@@ -33,9 +33,9 @@
     source venv/bin/activate  # На Windows: venv\Scripts\activate
     ```
 
-3. Установите зависимости:
+3. Установите зависимости, указанные в `pyproject.toml`:
     ```bash
-    pip install -r requirements.txt
+    poetry install
     ```
 
 4. Настройте базу данных PostgreSQL и создайте таблицу `participants`:
@@ -51,7 +51,7 @@
 
 1. Запустите скрипт:
     ```bash
-    python main.py
+    poetry run collect-imvu-data
     ```
 
 2. Следуйте инструкциям в консоли:
@@ -70,7 +70,7 @@
   - `utils.py` - Утилиты для обработки данных.
   - `fileworker.py` - (Не используется в текущей версии) Модуль для работы с файлами JSON.
 - `main.py` - Основной скрипт для запуска программы.
-- `requirements.txt` - Список зависимостей.
+- `pyproject.toml` - Файл конфигурации проекта, описывающий зависимости и скрипты Poetry.
 
 ## Примеры запросов к API IMVU
 

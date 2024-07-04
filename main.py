@@ -14,8 +14,8 @@ def user_interaction():
     avatar_url TEXT
     );
     ''')
-
-    db_manager = DBManager(dbname='IMVUDB', user='postgres', password='your_password')
+    password = input('Введите пароль:')
+    db_manager = DBManager(dbname='zximvu', user='postgres', password=password)
 
     chat_id = input("Введите ID чата для IMVU: ")
     top_n = int(input("Введите количество участников для добавления в базу данных: "))

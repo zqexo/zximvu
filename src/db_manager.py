@@ -1,5 +1,5 @@
 import psycopg2
-from src.participant import ChatParticipant
+from participant import ChatParticipant
 
 class DBManager:
     def __init__(self, dbname, user, password, host='localhost', port=5432):
